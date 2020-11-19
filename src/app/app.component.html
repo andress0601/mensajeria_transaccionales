@@ -1,0 +1,63 @@
+<div class="wrapper">
+
+  <div>
+    <div class="contenedor-padre">
+      <mat-toolbar class="barra" color="primary">
+        <mat-toolbar-row>
+          <button (click)="cajon.toggle()" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>
+            Mensajeria transporte
+          </span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <mat-sidenav-container class="contenido">
+        <mat-sidenav style="min-width: 300px;" #cajon mode="side">
+          <mat-nav-list>
+            <a mat-list-item routerLink="/mascotas/agregar">
+              <mat-icon color="accent">add</mat-icon>
+              Agregar vehiculos
+            </a>
+            <a mat-list-item routerLink="/mascotas">
+              <mat-icon color="primary">commute</mat-icon>
+              Ver vehiculos
+            </a>
+          </mat-nav-list>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <a> Más </a>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+    
+              <mat-nav-list>
+                <a mat-list-item routerLink="/acerca-de">
+                  Acerca de
+                </a>
+                <a mat-list-item href='https://github.com/andress0601/mensajeria_transaccionales/tree/proyecto/src/app'>
+                  Ayuda
+                </a>
+              </mat-nav-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-sidenav>
+        <mat-sidenav-content class="padding-10">
+          <router-outlet></router-outlet>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+
+  </div>
+
+  <div>
+    <app-primero>
+    </app-primero>
+  </div>
+
+
+
+</div>
+
+
